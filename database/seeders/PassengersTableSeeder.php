@@ -19,7 +19,7 @@ class PassengersTableSeeder extends Seeder
         for ($i = 0; $i < 50; $i++) {
             Passenger::create([
                 'name' => $faker->name(),
-                'email' => $faker->unique(),
+                'email' => $faker->safeEmail(),
                 'phone_number' => $faker->phoneNumber(),
             ]);
         }
