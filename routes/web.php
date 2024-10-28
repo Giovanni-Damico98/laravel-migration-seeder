@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PassengerController;
 use App\Http\Controllers\TrainsController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 // rotta che utilizza il metodo index attraverso la classe TrainsController
 Route::get('/', [TrainsController::class, 'index']);
+
+Route::get('/passengers', [PassengerController::class, 'index']);
